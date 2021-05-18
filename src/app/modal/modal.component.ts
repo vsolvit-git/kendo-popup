@@ -9,17 +9,20 @@ import { MatDialogRef } from '@angular/material/dialog';
 export class ModalComponent implements OnInit {
 
   public listItems: Array<string> = [
-    "X-Small",
-    "Small",
-    "Medium",
-    "Large",
-    "X-Large",
-    "2X-Large",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
   ];
+
+  public today: Date;
 
   constructor(public dialogRef: MatDialogRef<ModalComponent>, ) { }
 
   ngOnInit() {
+    this.today = new Date();
   }
 
 }

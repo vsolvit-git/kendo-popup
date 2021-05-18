@@ -7,9 +7,7 @@ import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalComponent } from './modal/modal.component';
 import { MatDialogModule } from '@angular/material'
-
-
-
+import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
 
 @NgModule({
   declarations: [
@@ -21,7 +19,8 @@ import { MatDialogModule } from '@angular/material'
     AppRoutingModule,
     DropDownsModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    DateInputsModule
   ],
   providers: [],
   entryComponents: [ModalComponent],

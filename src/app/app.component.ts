@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from './modal/modal.component';
 
@@ -9,6 +9,7 @@ import { ModalComponent } from './modal/modal.component';
 })
 export class AppComponent {
   title = 'popupDemo';
+  @ViewChild('bottom', {static: true}) bottomEl: ElementRef;
 
   constructor(public dialog: MatDialog) {
 
@@ -19,5 +20,9 @@ export class AppComponent {
       width: "600px",
       height: "250px"
     });
+  }
+
+  scrollDown() {
+    (this.bottomEl.nativeElement as HTMLElement).scrollIntoView();
   }
 }
