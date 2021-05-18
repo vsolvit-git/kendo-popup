@@ -1,4 +1,4 @@
-<mat-dialog-content>
+<div>
   <div class="row">
     <div class="col-sm-6">
       <div class="form-group">
@@ -16,5 +16,15 @@
       </div>
     </div>
   </div>
-
-</mat-dialog-content>
+  <hr />
+  <div class="row" style="margin-top: 4em;">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label>Open Dropdown (appendTo set to 'component'): </label>
+        <kendo-dropdownlist [data]="listItems"
+                            [popupSettings]="{appendTo:'component'}">
+        </kendo-dropdownlist>
+      </div>
+    </div>
+  </div>
+</div>

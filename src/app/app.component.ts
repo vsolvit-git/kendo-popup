@@ -9,7 +9,16 @@ import { ModalComponent } from './modal/modal.component';
 })
 export class AppComponent {
   title = 'popupDemo';
-  @ViewChild('bottom', {static: true}) bottomEl: ElementRef;
+  @ViewChild('bottom', { static: true }) bottomEl: ElementRef;
+  public listItems: Array<string> = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ];
+
 
   constructor(public dialog: MatDialog) {
 
